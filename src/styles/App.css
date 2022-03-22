@@ -1,38 +1,38 @@
-.App {
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   text-align: center;
 }
+/* ------------------------------------------- CSS Course ---------------------------------------- */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-title {
+  background: lightgreen;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-title h1 {
+  color: darkblue;
+  font-family: 'Anton', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-subtitle {
+  background: lightsteelblue;
 }
 
-.App-link {
-  color: #61dafb;
+.home-subtitle h3 {
+  color: darkblue;
+  font-family: 'Anton', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-btn {
+   background: black;  /* overwritten by online style */
 }
+
+button {
+  background-color: lightsteelblue;
+}
+
+[disabled] {
+  color: red
+}
+
+

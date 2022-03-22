@@ -1,10 +1,15 @@
 
 import './styles/App.css';
+import Home from './components/Home.js'
 
 function App() {
   return (
     <div className="App">
-      <h1>React CSS Course </h1>
+      <Home 
+      title='Boutique do Suspiro'
+      subtitle = 'The best candy in the region'
+      color = 'lightgreen'
+      ></Home>
     </div>
   );
 }
