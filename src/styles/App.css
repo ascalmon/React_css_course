@@ -1,12 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  text-align: center;
+  /* text-align: center; */
+  margin: 0;
+  
 }
 /* ------------------------------------------- CSS Course ---------------------------------------- */
-
+.main {
+  background: url("./../assets/beach.jpg");
+  background-repeat: no-repeat;
+}
 .home-title {
   background: lightgreen;
+  width: 100%;
+  height: 230px;
+  min-height: 200px;
+  padding: 10px;
+
 }
 
 .home-title h1 {
@@ -18,15 +32,36 @@ body {
   background: lightsteelblue;
 }
 
-.home-subtitle h3 {
+.home-subtitle h3 + p { /* combination of sibblings h3 + p and descendent .home-subtitle h3 + p */
   color: darkblue;
   font-family: 'Anton', sans-serif;
+}
+
+.home-subtitle h3 { /* .home-subtitle descendent h3  */
+  color: darkblue;
+  font-family: 'Anton', sans-serif;
+}
+
+.home-subtitle h3::first-letter {
+  color: red;
 }
 
 .home-btn {
    background: black;  /* overwritten by online style */
 }
 
+.home-logo {
+  display: inline-block;
+  padding: 10px;
+}
+
+.home-img {
+  border: 1px solid gray;
+  border-radius: 50px;
+  /* box-shadow: 5px 5px 5px lightgray; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  vertical-align: middle;
+}
 button {
   background-color: lightsteelblue;
 }
@@ -35,4 +70,74 @@ button {
   color: red
 }
 
+.main-header {
+  width: 100%;
+  display: inline-block;
+  background: #5a5dec;
 
+}
+
+.main-header > div {  /* div is child of main-header */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header ul{
+  list-style-type: none;
+  text-align: right;
+}
+
+.nav {
+  display: inline-block;
+  width: calc(100% - 80px);
+}
+
+.nav-link {
+  color: white;
+  padding: 0 7px;
+}
+
+
+.nav-link:hover {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+
+.nav-link:active {
+  color: darkred;
+  border-bottom: 2px solid darkred;
+}
+
+
+.nav-item {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-item-cta a {
+  color: white;
+  background: darkturquoise;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.nav-item-cta a:hover, .nav-item-cta a:active {
+  border-bottom: none;
+  color: darkturquoise;
+  background: white;
+}
+
+/* .nav-item a::after {
+  content: " (Link)";
+  color: darkgoldenrod;
+} */
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+}
