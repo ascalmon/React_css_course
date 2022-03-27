@@ -1,42 +1,112 @@
 import React from 'react'
+import './../styles/main.css';
+import './../styles/App.css';
+import { ReactComponent as Svg1 } from './../assets/svg1.svg';
+import { ReactComponent as Svg2 } from './../assets/svg2.svg';
+import { ReactComponent as Svg3 } from './../assets/svg3.svg';
 
 function Home(props) {
 
-const { title, subtitle, color } = props
+const { title, subtitle, color, link1, link2, link3 } = props
 
 return (
     <>
-    <header className="main-header">
-        <div className='home-logo'>
-            <img className="home-img" src="boutique.png" alt="logo" width='60' height='60' />
-        </div>
-        <nav className="nav">
-            <ul  className="nav-list">
-                <li className="nav-item">
-                    <a className="nav-link" href='components/home.js' >Home</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href='components/home.js' >About</a>
-                </li>
-                <li className="nav-item nav-item-cta">
-                    <a className="nav-link" href='components/home.js' >CTA Business</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+   
     <main className="main">
+        <div className="main-background">
         <div className='home-title'>
             <h1>{title}</h1>
         </div>
         <div className='home-subtitle'>
             <h3>{subtitle}</h3>
-            <p>This is how Boutique was created.</p>
+            <p>This is how Good Service was created.</p>
         </div>
-        <button className="home-btn" disabled style={{background: `${color}`}}>OK</button>
-
-        <input type="checkbox" className="home-check" checked style={{ color: `${color}` }}/>
-    </main>
+        </div>
     
+        <section>
+            <h1 className="section-title">Choose Your Plan</h1>
+                <div className="plan-list">
+                    <article className="plan">
+                        <h1 className="plan__title">FREE</h1>
+                        <h2 className="plan__price">$0/month</h2>
+                        <h3>For hobby projects or small teams.</h3>
+                        <ul className="plan__features">
+                            <li className="plan__feature">1 Workspace</li>
+                            <li className="plan__feature">Unlimited Traffic</li>
+                            <li className="plan__feature">10GB Storage</li>
+                            <li className="plan__feature">Basic Support</li>
+                        </ul>
+                        <div>
+                            <button className="plan__button">CHOOSE PLAN</button>
+                        </div>
+                    </article>
+                    <article className="plan plan__highlighted">
+                        <h1 className="plan__subtitle">RECOMMENDED</h1>
+                        <h1 className="plan__title">PLUS</h1>
+                        <h2 className="plan__price">$29/month</h2>
+                        <h3>For ambitious projects.</h3>
+                        <ul className="plan__features">
+                            <li className="plan__feature">5 Workspaces</li>
+                            <li className="plan__feature">Unlimited Traffic</li>
+                            <li className="plan__feature">100GB Storage</li>
+                            <li className="plan__feature">Plus Support</li>
+                        </ul>
+                        <div>
+                            <button className="plan__button">CHOOSE PLAN</button>
+                        </div>
+                    </article>
+                    <article className="plan">
+                        <h1 className="plan__title">PREMIUM</h1>
+                        <h2 className="plan__price">$99/month</h2>
+                        <h3>Your enterprise solution.</h3>
+                        <ul className="plan__features">
+                            <li className="plan__feature">10 Workspaces</li>
+                            <li className="plan__feature">Unlimited Traffic</li>
+                            <li className="plan__feature">Unlimited Storage</li>
+                            <li className="plan__feature">Priority Support</li>
+                        </ul>
+                        <div>
+                            <button className="plan__button">CHOOSE PLAN</button>
+                        </div>
+                    </article>
+                </div>
+        </section>
+        <section id="key-features">
+            <h1 className="section-title">Many Good Reasons to Stick Around</h1>
+            <ul className="key__features">
+                <li className="key__feature">
+                    <div className="key__feature__img">
+                         <Svg1/>
+                    </div>
+                    <p className="key__feature_description">3,857,000 Trusting Customers</p>
+                </li>
+                <li className="key__feature">
+                    <div className="key__feature__img">
+                         <Svg2/>
+                    </div>
+                    <p className="key__feature_description">99.999% Uptime Guarantee</p>
+                </li>
+                <li className="key__feature">
+                    <div className="key__feature__img">
+                         <Svg3/>
+                    </div>
+                    <p className="key__feature_description">Lightning Fast CDN</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer className="footer">
+        <nav className='footer-nav'>
+            <ul className='footer-features'>
+                <li className='footer__feature'>
+                    <a className='footer__feature_link' href="#">Support</a>
+                </li>
+                <li className='footer__feature'>
+                    <a className='footer__feature_link' href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
     </>
 )
 }
