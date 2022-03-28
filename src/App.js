@@ -4,13 +4,6 @@ import Home from './components/Home.js';
 import Page from './components/Page.js';
 import Customer from './components/Customer.js';
 
-export const routes = {
-  "/": () => <Home />,
-  "/page": () => <Page />,
-  "/customer": () => <Customer />
-}
-
-
 function App() {
 
   const [ route, setRoute ] = useState('Home');

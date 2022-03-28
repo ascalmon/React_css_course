@@ -4,20 +4,12 @@ import './../styles/page.css';
 
 function Page(props) {
 
-    const { title, subtitle, color, link1, link2, link3 } = props
+  
 
     return (
         <>
             <div className="background"></div>
-           
             <main className="main">
-                {/* <div className='page-title'>
-                    <h1>{title}</h1>
-                </div>
-                <div className='page-subtitle'>
-                    <h3>{subtitle}</h3>
-                    <p>This is how Boutique was created.</p>
-                </div> */}
             
                 <section className="page-section page-section-plus">
                     <a href="#">

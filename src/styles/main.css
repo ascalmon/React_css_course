@@ -9,11 +9,72 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  /* text-align: center; */
   margin: 0;
-  
 }
 
+.backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*  Modal  */
+
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
+/* Header */
 .main-header {
   width: 100%;
   display: inline-block;
@@ -22,6 +83,39 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.page-logo {
+    margin-top: 5px;
+
+}
+
+.page-img {
+
+}
+
+/* Hamburguer */
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
 }
 
 .main-header > div {  /* div is child of main-header */
@@ -34,9 +128,11 @@ body {
   text-align: right;
 }
 
-.nav {
+/*  Desktop Navbar */
+
+.main-nav {
   display: inline-block;
-  width: calc(100% - 80px);
+  width: calc(100% - 122px);
 }
 
 .nav-link {
@@ -46,8 +142,8 @@ body {
 
 
 .nav-link:hover {
-  color: yellow;
-  border-bottom: 2px solid yellow;
+  color: #22499c;
+  border-bottom: 2px #22499c;
 }
 
 .nav-link:active {
@@ -56,24 +152,30 @@ body {
 }
 
 
-.nav-item {
+.main-nav__item {
   display: inline-block;
   margin: 0px 5px;
 }
 
-.nav-item a {
+.main-nav__item a,
+.mobile-nav__item a {
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav-item-cta a {
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
   color: white;
   background: darkturquoise;
   padding: 6px 10px;
   border-radius: 8px;
 }
 
-.nav-item-cta a:hover, .nav-item-cta a:active {
+.main-nav__item--cta a:hover, 
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active
+ {
   border-bottom: none;
   color: darkturquoise;
   background: white;
@@ -84,10 +186,42 @@ body {
   color: darkgoldenrod;
 } */
 
-.nav-list {
+.main-nav__items {
   margin: 0;
   padding: 0;
 }
+
+/* Mobile Navbar */
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+}
+
+/* Footer */
 
 
 .footer {
@@ -117,4 +251,8 @@ body {
 .footer__feature_link:hover,
 .footer__feature_link:active {
   color: darkgray;
+}
+
+.open {
+  display: block!important;
 }

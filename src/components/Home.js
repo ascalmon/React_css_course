@@ -1,17 +1,40 @@
-import React from 'react'
+import React , { useEffect } from 'react'
 import './../styles/main.css';
 import './../styles/App.css';
 import { ReactComponent as Svg1 } from './../assets/svg1.svg';
 import { ReactComponent as Svg2 } from './../assets/svg2.svg';
 import { ReactComponent as Svg3 } from './../assets/svg3.svg';
 
+
+
 function Home(props) {
 
-const { title, subtitle, color, link1, link2, link3 } = props
+const { title, subtitle } = props
+
+useEffect(() => {
+    const selectPlanButtons = document.querySelectorAll('.plan button');
+    const backdrop = document.querySelector('.backdrop');
+    const modal = document.querySelector('.modal');
+    for (let i = 0; i < selectPlanButtons.length; i++) {
+         selectPlanButtons[i].addEventListener('click', function() {
+            modal.classList.add('open');
+            backdrop.classList.add('open');
+         })
+    }  
+    return () => {
+        for(let i = 0; i<selectPlanButtons.length; i++) {
+            selectPlanButtons[i].removeEventListener('click', function () {
+                modal.classList.remove('open');
+                backdrop.classList.remove('open');
+            })
+        } 
+    }
+}, [])
+
+
 
 return (
     <>
-   
     <main className="main">
         <div className="main-background">
         <div className='home-title'>
@@ -107,7 +130,9 @@ return (
             </ul>
         </nav>
     </footer>
+        <script src='../scripts/script.js'></script>
     </>
+   
 )
 }
 

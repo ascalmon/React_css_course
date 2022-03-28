@@ -29,13 +29,14 @@ body {
 .home-title {
   background: transparent;
   padding: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
 }
 
 .home-title h1 {
-  color: darkblue;
+  color: white;
   font-family: 'Anton', sans-serif;
-  text-align: center;
-  margin-top: 100px;
 }
 
 .home-subtitle {
@@ -229,31 +230,3 @@ body {
   padding: 20px;
 }
 
-.footer {
-  background: black;
-  padding: 32px;
-  margin-top: 48px;
-}
-
-.footer-features {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.footer__feature {
-  display: inline-block;
-  margin: 0px 16px;
-}
-
-.footer__feature_link {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.footer__feature_link:hover,
-.footer__feature_link:active {
-  color: darkgray;
-}
