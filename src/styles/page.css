@@ -34,7 +34,7 @@
 }
 
 .page-section-plus {
-    background: #7a92c7;
+    background: rgba(122, 146, 199, 0.9);
 }
 
 .page-section__badge {
@@ -53,14 +53,14 @@
 }
 
 .page-section-free {
-    background: #8ea0c7;
+    background: rgba(142, 160,199, 0.9);
     float: right;
     border-right: none;
     border-left: 4px solid #233c71;
 }
 
 .page-section-premium {
-    background: #22499c;
+    background: rgba(34, 73, 156, 0.9);
 }
 
 .page-section-premium .page-section__title{

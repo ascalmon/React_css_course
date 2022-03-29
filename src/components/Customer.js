@@ -6,7 +6,6 @@ function Customer() {
   return (
     <>
     <main className="main" >
-    \
         <div>
             <div className="testimonial" id="customer-1">
                 <div className="testimonial__image-container">

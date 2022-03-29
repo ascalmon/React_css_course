@@ -140,7 +140,6 @@ body {
   padding: 0 7px;
 }
 
-
 .nav-link:hover {
   color: #22499c;
   border-bottom: 2px #22499c;
@@ -255,4 +254,16 @@ body {
 
 .open {
   display: block!important;
+}
+
+@media only screen and (min-width: 40rem) {
+  .toggle-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .nav-link {
+    display: none;
+  }
 }
