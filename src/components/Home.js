@@ -35,7 +35,7 @@ useEffect(() => {
 
 return (
     <>
-    <main className="main">
+    <main className="main-home">
         <div className="main-background">
         <div className='home-title'>
             <h1>{title}</h1>

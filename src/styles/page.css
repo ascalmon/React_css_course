@@ -1,5 +1,5 @@
 
-.main {
+.main-page {
     padding: 80px 0 0 0;
 }
 
@@ -88,4 +88,21 @@
     font-size: 20px;
     padding: 16px;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 40rem) {
+    .main-page {
+        margin: 3rem auto;
+        max-width: 90rem;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .page-section {
+        border-left: 4px solid #233c71; 
+    }
+    .page-section-free {
+        border-right: 4px solid #233c71; 
+    }
+
 }

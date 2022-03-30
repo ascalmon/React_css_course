@@ -17,37 +17,33 @@ function App() {
 
     <div className="App">
       <Navbar
-        link1 = 'Home'
-        link2 = 'Page'
-        link3 = 'Customer'
+        link1 = 'Packages'
+        link2 = 'Customer'
+        link3 = 'Start Hosting'
         color = '#7a92c7'
         link = {link}
       ></Navbar>
       {route === 'Home' ?
         <Home
-            title='Get the Freedom You Deserve'
-            subtitle = 'The best Telecom in the region'
-            link1='Home'
-            link2='Page'
-            link3='Customer'
-            color='#7a92c7'
+          title='Get the Freedom You Deserve'
+          subtitle = 'The best Telecom in the region'
+          link1='Packages'
+          link2='Customer'
+          link3='Start Hosting'
+          color='#7a92c7'
         ></Home>
       : route === 'Page' ?
         <Page 
-          title='Get the Freedom You Deserve'
-          subtitle = 'The best Telecom in the region'
-          link1 = 'About'
-          link2 = 'Contact'
-          link3 = 'Business'
+          link1='Packages'
+          link2='Customer'
+          link3='Start Hosting'
           color= '#7a92c7'
-          ></Page>
+        ></Page>
       : route === 'Customer' ? 
         <Customer
-          title='Get the Freedom You Deserve'
-          subtitle = 'The best Telecom in the region'
-          link1 = 'About'
-          link2 = 'Contact'
-          link3 = 'Business'
+          link1 = 'Packages'
+          link2 = 'Customer'
+          link3 = 'Start Hosting'
           color= '#7a92c7'
         ></Customer>
       : null

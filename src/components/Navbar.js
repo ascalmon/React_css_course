@@ -70,18 +70,21 @@ export default function Navbar(props) {
                 <span className="toggle-button__bar"></span>
             </button>
             <div className='page-logo'>
-                <img className="page-img" src={require("./../assets/boutique.png")}  alt="logo" width='60' height='60' />
+                
+                 <a className="nav-link" href='home' onClick={(e) => handleClick('Home', e)}>
+                      <img className="page-img" src={require("./../assets/boutique.png")} alt="logo" width='60' height='60' />
+                 </a>
             </div>
             <nav className="main-nav">
                 <ul className="main-nav__items">
                     <li className="main-nav__item">
-                        <a className="nav-link" href='home' onClick={(e) => handleClick('Home',e)}>{link1}</a>
+                        <a className="nav-link" href='page' onClick={(e) => handleClick('Page',e)}>{link1}</a>
                     </li>
                     <li className="main-nav__item">
-                        <a className="nav-link" href='page' onClick={(e) => handleClick('Page', e)}>{link2}</a>
+                        <a className="nav-link" href='customer' onClick={(e) => handleClick('Customer', e)}>{link2}</a>
                     </li>
                     <li className="main-nav__item main-nav__item--cta">
-                    <a className="nav-link" href='customer' onClick={(e) => handleClick('Customer', e)}>{link3}</a>
+                    <a className="nav-link" href='start' onClick={(e) => handleClick('Start', e)}>{link3}</a>
                     </li>
                 </ul>
             </nav>

@@ -4,12 +4,11 @@ import './../styles/page.css';
 
 function Page(props) {
 
-  
 
     return (
         <>
             <div className="background"></div>
-            <main className="main">
+            <main className="main-page">
             
                 <section className="page-section page-section-plus">
                     <a href="#">

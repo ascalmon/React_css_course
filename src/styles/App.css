@@ -9,14 +9,14 @@ body {
   
 }
 /* ------------------------------------------- CSS Course ---------------------------------------- */
-.main {
+.main-home {
   
 }
 
 .main-background {
   background-image: url("./../assets/freedom.jpg");
   background-size: cover;
-  background-position: left 10% bottom 30%;
+  background-position: left 10% bottom 80%;
   background-repeat: no-repeat;
   background-origin: border-box;
   width: 100vw;
@@ -184,7 +184,7 @@ body {
   text-align: center;
   color: white;
   padding: 8px;
-  /* margin: 32px; */
+  margin: 0;
 }
 
 #key-features {
