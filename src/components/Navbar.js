@@ -49,6 +49,9 @@ export default function Navbar(props) {
 
     
     const handleClick = (link,e) => {
+        if (link === 'Start') {
+            closeModal();
+        }
         e.preventDefault();
         props.link(link);
     }
@@ -59,7 +62,7 @@ export default function Navbar(props) {
         <div className="modal">
             <h1 className="modal__title">Do you want to continue?</h1>
             <div className="modal__actions">
-                <a href="start-hosting/index.html" className="modal__action">Yes!</a>
+                <a href='start' onClick={(e) => handleClick('Start', e)}  className="modal__action">Yes!</a>
                 <button className="modal__action modal__action--negative" type="button">No!</button>
             </div>
         </div>
@@ -92,13 +95,13 @@ export default function Navbar(props) {
        <nav className="mobile-nav">
         <ul className="mobile-nav__items">
             <li className="mobile-nav__item">
-                <a href='home' onClick={(e) => handleClick('Home',e)}>{link1}</a>
+                <a href='page' onClick={(e) => handleClick('Page',e)}>{link1}</a>
             </li>
             <li className="mobile-nav__item">
-                <a href='page' onClick={(e) => handleClick('Page', e)}>{link2}</a>
+                <a href='customer' onClick={(e) => handleClick('Customer', e)}>{link2}</a>
             </li>
             <li className="mobile-nav__item mobile-nav__item--cta">
-                <a href='customer' onClick={(e) => handleClick('Customer', e)}>{link3}</a>
+                <a href='start' onClick={(e) => handleClick('Start', e)}>{link3}</a>
             </li>
         </ul>
     </nav>

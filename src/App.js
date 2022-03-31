@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js';
 import Page from './components/Page.js';
+import Start from './components/Start.js';
 import Customer from './components/Customer.js';
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
 
   return (
     <>
-
     <div className="App">
       <Navbar
         link1 = 'Packages'
@@ -46,7 +46,14 @@ function App() {
           link3 = 'Start Hosting'
           color= '#7a92c7'
         ></Customer>
-      : null
+      : route === 'Start' ?
+        <Start
+          link1='Packages'
+          link2='Customer'
+          link3='Start Hosting'
+          color='#7a92c7'
+        ></Start>
+        : null
       }
     </div>
     </>
