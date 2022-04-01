@@ -13,6 +13,17 @@ function App() {
     setRoute(link)
   }
 
+  useEffect(() => {
+    const url_target = window.location.pathname.split('/')[1];
+    console.log('Url', window.location.pathname.split('/')[1])
+    if (url_target !== '') {
+      link(url_target.charAt(0).toLocaleUpperCase() + url_target.slice(1))
+    }
+  },[])
+  
+
+ 
+
   return (
     <>
     <div className="App">

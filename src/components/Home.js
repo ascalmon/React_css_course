@@ -37,13 +37,13 @@ return (
     <>
     <main className="main-home">
         <div className="main-background">
-        <div className='home-title'>
-            <h1>{title}</h1>
-        </div>
-        <div className='home-subtitle'>
-            <h3>{subtitle}</h3>
-            <p>This is how Good Service was created.</p>
-        </div>
+            <div className='home-title'>
+                <h1>{title}</h1>
+            </div>
+            <div className='home-subtitle'>
+                <h3>{subtitle}</h3>
+                <p>This is how Good Service was created.</p>
+            </div>
         </div>
     
         <section>

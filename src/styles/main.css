@@ -2,6 +2,10 @@
   --nav-color: #7a92c7;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 * {
   box-sizing: border-box;
 }
@@ -77,21 +81,30 @@ body {
 /* Header */
 .main-header {
   width: 100%;
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: var(--nav-color);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  /* vertical-align: middle; */
 }
 
 .page-logo {
-    margin-top: 5px;
-
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    /* height: 3.5rem; */
 }
 
 .page-img {
-
+  /* height: 3.5rem;
+  width: auto; */
+  vertical-align: middle;
 }
 
 /* Hamburguer */
@@ -118,10 +131,10 @@ body {
   margin: 0.6rem 0;
 }
 
-.main-header > div {  /* div is child of main-header */
+/* .main-header > div {  
   display: inline-block;
   vertical-align: middle;
-}
+} */
 
 .main-header ul{
   list-style-type: none;
@@ -131,7 +144,7 @@ body {
 /*  Desktop Navbar */
 
 .main-nav {
-  display: inline-block;
+  /* display: inline-block; */
   width: calc(100% - 122px);
 }
 
@@ -150,9 +163,8 @@ body {
   border-bottom: 2px solid darkred;
 }
 
-
 .main-nav__item {
-  display: inline-block;
+  display: inline-flex;
   margin: 0px 5px;
 }
 
@@ -226,6 +238,10 @@ body {
   background: black;
   padding: 32px;
   margin-top: 48px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .footer-features {
@@ -236,7 +252,7 @@ body {
 }
 
 .footer__feature {
-  display: inline-block;
+  display: inline-flex;
   margin: 0px 16px;
 }
 
@@ -262,7 +278,11 @@ body {
 }
 
 @media only screen and (max-width: 40rem) {
-  .nav-link {
+  .nav-link.home-link {
+    display: inline-block;
+  }
+  .nav-link{
     display: none;
   }
+  
 }

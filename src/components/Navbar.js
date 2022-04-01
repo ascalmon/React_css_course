@@ -49,11 +49,15 @@ export default function Navbar(props) {
 
     
     const handleClick = (link,e) => {
-        if (link === 'Start') {
-            closeModal();
-        }
         e.preventDefault();
-        props.link(link);
+        if (link !== 'Modal') {
+            props.link(link)
+            
+        } else {
+            closeModal();
+            props.link('Start');
+        }
+        
     }
 
   return (
@@ -62,21 +66,20 @@ export default function Navbar(props) {
         <div className="modal">
             <h1 className="modal__title">Do you want to continue?</h1>
             <div className="modal__actions">
-                <a href='start' onClick={(e) => handleClick('Start', e)}  className="modal__action">Yes!</a>
+                <a href='start' onClick={(e) => handleClick('Modal', e)}  className="modal__action">Yes!</a>
                 <button className="modal__action modal__action--negative" type="button">No!</button>
             </div>
         </div>
         <header className="main-header" style={{ background: `${color}` }}>
-            <button className="toggle-button">
-                <span className="toggle-button__bar"></span>
-                <span className="toggle-button__bar"></span>
-                <span className="toggle-button__bar"></span>
-            </button>
-            <div className='page-logo'>
-                
-                 <a className="nav-link" href='home' onClick={(e) => handleClick('Home', e)}>
-                      <img className="page-img" src={require("./../assets/boutique.png")} alt="logo" width='60' height='60' />
-                 </a>
+            <div className=''>
+                <button className="toggle-button">
+                    <span className="toggle-button__bar"></span>
+                    <span className="toggle-button__bar"></span>
+                    <span className="toggle-button__bar"></span>
+                </button>
+                <a className="nav-link home-link" href='home' onClick={(e) => handleClick('Home', e)}>
+                    <img className="page-img" src={require("./../assets/boutique.png")} alt="logo" width='60' height='60' />
+                </a>
             </div>
             <nav className="main-nav">
                 <ul className="main-nav__items">
